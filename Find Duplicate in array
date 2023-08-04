@@ -1,0 +1,23 @@
+int findDuplicate(vector<int> &a, int n) {
+
+ 
+
+    for (int i = 0; i < n; i++) {
+
+        int ind = abs(a[i]) - 1;
+
+        if (a[ind] > 0) {
+
+            a[ind] = -a[ind];
+
+        } else {
+
+            return abs(a[i]);
+
+        }
+
+    }
+
+    return -1;
+
+}
